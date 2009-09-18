@@ -1,3 +1,9 @@
+" We're running Vim, not Vi!
+"
+set nocompatible
+
+" Terminal Encodings
+"
 if $TERM =~ '^xterm-256color'
         set t_Co=256 
 elseif $TERM =~ '^screen-bce'
@@ -10,43 +16,29 @@ else
         set t_Co=16
 endif
 
+" Environment
+"
+let $PATH = $PATH . ":/opt/local/bin"
+filetype plugin indent on
+
+" Keyboard Shortcuts
+"
 set pastetoggle=<F8>
+let mapleader=";"
 
-set nocompatible          " We're running Vim, not Vi!
-" set number              " Line numbering
-syntax on                 " Enable syntax highlighting
-filetype plugin indent on " Enable filetype detection
-
-let loaded_matchparen = 0
-let g:xml_syntax_folding = 1
-
-function! Mosh_Tab_Or_Complete()
-    if col('.')>1 && strpart( getline('.'), col('.')-2, 3 ) =~ '^\w'
-        return "\<C-N>"
-    else
-        return "\<Tab>"
-endfunction
-
-inoremap <Tab> <C-R>=Mosh_Tab_Or_Complete()<CR>
-
-command -range=% Copy :<line1>,<line2>w !pbcopy
-
+" GUI Tweaks
+"
+colorscheme desert
+syntax on
 set shortmess=aTItoO
+set guioptions-=T
+set linebreak
 set wrap
-
+set hlsearch
+set ignorecase
 set tabstop=2
 set shiftwidth=2
 
-let mapleader=";"
-
-" don't break linkes halfway through words if possible
-set linebreak
-
-set hlsearch
-set ignorecase
-
-colorscheme desert
-
-set guioptions-=T
-
-let $PATH = $PATH . ":/opt/local/bin"
+" Mac specific copy command
+"
+command -range=% Copy :<line1>,<line2>w !pbcopy
