@@ -18,12 +18,9 @@ set ai
 " Shortcuts "
 "-----------"
 
-" help(?)
-map <Leader>? :! cat $HOME/.vim/ftplugin/haskell.vim<CR>
-
 " (b)uild
-map <Leader>b :w<CR>:!ghc -fglasgow-exts --make -W '%' -o '%<'<CR>
-map <Leader>B :w<CR>:!ghc -fglasgow-exts --make -W '%' -o '%<'
+map <Leader>b :w<CR>:!ghc -fglasgow-exts --make -O2 -W '%' -o '%<'<CR>
+map <Leader>B :w<CR>:!ghc -fglasgow-exts --make -O2 -W '%' -o '%<'
 
 " (i)nterpret
 map <Leader>i :w<CR>:!ghci -fglasgow-exts -i. %<CR>
@@ -38,12 +35,12 @@ map <Leader>t :w<CR>:!quickcheck +names %<CR>
 map <Leader>T :w<CR>:!quickcheck +names %
 
 " (r)un built version
-map <Leader>r :w<CR>:!ghc -fglasgow-exts --make -W '%' -o '%<' && ./%<<CR>
-map <Leader>R :w<CR>:!ghc -fglasgow-exts --make -W '%' -o '%<' && ./%<
+map <Leader>r :w<CR>:!ghc -fglasgow-exts --make -O2 -W '%' -o '%<' && ./%<<CR>
+map <Leader>R :w<CR>:!ghc -fglasgow-exts --make -O2 -W '%' -o '%<' && ./%<
 
 " (c)un concurrent built version
-map <Leader>c :w<CR>:!ghc -fglasgow-exts --make -W -threaded '%' -o '%<' && ./%< +RTS -N2<CR>
-map <Leader>C :w<CR>:!ghc -fglasgow-exts --make -W -threaded '%' -o '%<' && ./%< +RTS -N2
+map <Leader>c :w<CR>:!ghc -fglasgow-exts --make -W -O2 -threaded '%' -o '%<' && ./%< +RTS -N2<CR>
+map <Leader>C :w<CR>:!ghc -fglasgow-exts --make -W -O2 -threaded '%' -o '%<' && ./%< +RTS -N2
 
 " Interpret (a)nd run
 map <Leader>a :w<CR>:!runhaskell %<CR>

@@ -28,8 +28,13 @@ let mapleader=";"
 
 " GUI Tweaks
 "
-colorscheme desert
+
+colorscheme rdark_temoto
+"colorscheme zenburn
+"colorscheme desert
+"colorscheme wombat
 syntax on
+
 set shortmess=aTItoO
 set guioptions-=T
 set linebreak
