@@ -1,13 +1,18 @@
+let mapleader=";"
+
+" Paste
+set pastetoggle=<Leader><Leader>i
+
 " Vanilla Vim
-map <Leader>< :bp<CR>
-map <Leader>> :bn<CR>
+map <Leader><Leader>< :bp<CR>
+map <Leader><Leader>> :bn<CR>
 
 " Nerd Tree
-map <Leader>q :NERDTreeToggle<CR>
+map <Leader><Leader>q :NERDTreeToggle<CR>
 
 " Fuzzy Finder
-map <Leader>F :FuzzyFinderFile!<CR>
-map <Leader>f :FuzzyFinderFile<CR>
+map <Leader><Leader>F :FuzzyFinderFile!<CR>
+map <Leader><Leader>f :FuzzyFinderFile<CR>
 
 " Shell
 nmap <Leader><Leader>s :call InitShell()<cr>

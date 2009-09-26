@@ -21,14 +21,8 @@ endif
 let $PATH = $PATH . ":/opt/local/bin"
 filetype plugin indent on
 
-" Keyboard Shortcuts
-"
-set pastetoggle=<F8>
-let mapleader=";"
-
 " GUI Tweaks
 "
-
 colorscheme rdark_temoto
 "colorscheme zenburn
 "colorscheme desert
