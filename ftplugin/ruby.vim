@@ -1,1 +1,1 @@
-map <Leader>i :w<CR>:!irb -r %<CR>
+map <Leader>i :w<CR>:!irb -r "%"<CR>
