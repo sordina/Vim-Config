@@ -10,7 +10,8 @@ map <Leader><Leader>< :bp<CR>
 map <Leader><Leader>> :bn<CR>
 
 " Paths
-map <Leader><Leader>y :let @*=expand('%:p')
+map <Leader><Leader>y :let @*=expand('%:p')<CR> :let @p=expand('%:p')<CR>
+map <Leader><Leader>Y :let @*=expand('%:p')
 
 " Nerd Tree
 map <Leader><Leader>a :NERDTreeToggle<CR>
