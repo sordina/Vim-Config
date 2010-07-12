@@ -10,6 +10,8 @@ map <Leader><Leader>I :set nopaste<CR>
 map <Leader><Leader>< :bp<CR>
 map <Leader><Leader>> :bn<CR>
 
+map <Leader><Leader>f :tabNext<CR>
+
 " Nerd Tree
 map <Leader><Leader>a :NERDTreeToggle<CR>
 

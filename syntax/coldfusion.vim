@@ -211,3 +211,6 @@ HiLink	cfDeprecated	Error
 delcommand HiLink
 
 let b:current_syntax = "cf"
+
+"EOF vim: tw=78:ft=vim:ts=8
+
