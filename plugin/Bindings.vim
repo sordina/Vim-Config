@@ -3,14 +3,15 @@ let mapleader=";"
 " Paste
 set pastetoggle=<F8>
 
-
 " Vanilla Vim
 map <Leader><Leader>i :set paste<CR>
 map <Leader><Leader>I :set nopaste<CR>
 map <Leader><Leader>< :bp<CR>
 map <Leader><Leader>> :bn<CR>
 
-map <Leader><Leader>f :tabNext<CR>
+" Paths
+map <Leader><Leader>y :let @*=expand('%:p')<CR> :let @p=expand('%:p')<CR>
+map <Leader><Leader>Y :let @*=expand('%:p')
 
 " Nerd Tree
 map <Leader><Leader>a :NERDTreeToggle<CR>
