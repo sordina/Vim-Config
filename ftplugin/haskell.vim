@@ -55,5 +55,23 @@ map <Leader>l :w<CR>:! hlint --color '%'<CR>
 map <Leader>L :w<CR>:! hlint --color '%'
 
 " (s)earch hoogle
-map <Leader>s :! hoogle 
+map <Leader>s :! hoogle
 map <Leader>S :! hoogle --info "
+
+" Cabal (f)unctions
+
+" (c)onfigure
+map <Leader>fc :w<CR>:! cabal configure<CR>
+map <Leader>fC :w<CR>:! cabal configure
+
+" (b)uild
+map <Leader>fb :w<CR>:! cabal build<CR>
+map <Leader>fB :w<CR>:! cabal build
+
+" (i)nstall
+map <Leader>fi :w<CR>:! cabal install<CR>
+map <Leader>fI :w<CR>:! cabal install
+
+" build (a)nd install
+map <Leader>fa :w<CR>:! cabal build && cabal install<CR>
+map <Leader>fA :w<CR>:! cabal build && cabal install
