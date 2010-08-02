@@ -26,8 +26,8 @@ if has("win32")
 	map <Leader><Leader>. :!start explorer %:h<CR>
 
 elseif has("mac")
-	map <Leader><Leader>/ :open .<CR>
-	map <Leader><Leader>. :open %:h<CR>
+	map <Leader><Leader>/ :!open .<CR>
+	map <Leader><Leader>. :!open %:h<CR>
 endif
 
 " Paths
