@@ -72,6 +72,10 @@ map <Leader>fB :w<CR>:! cabal build
 map <Leader>fi :w<CR>:! cabal install<CR>
 map <Leader>fI :w<CR>:! cabal install
 
+" (r)un
+map <Leader>fr :w<CR>:! ./dist/build/*/*(*)<CR>
+map <Leader>fR :w<CR>:! ./dist/build/*/*(*)<CR>
+
 " build (a)nd install
 map <Leader>fa :w<CR>:! cabal build && cabal install<CR>
 map <Leader>fA :w<CR>:! cabal build && cabal install
