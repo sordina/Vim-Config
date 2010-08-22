@@ -41,4 +41,4 @@ set ai
 
 " Mac specific copy command
 "
-command -range=% Copy :<line1>,<line2>w !pbcopy
+command! -range=% Copy :<line1>,<line2>w !pbcopy

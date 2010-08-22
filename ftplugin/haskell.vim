@@ -14,6 +14,17 @@ set sw=2
 set expandtab
 set ai
 
+
+"------------------"
+" Helper Functions "
+"------------------"
+
+function! JustTheModules()
+	let path = tempname()
+	" g/^import.*/y A
+	return path
+endfunction
+
 "-----------"
 " Shortcuts "
 "-----------"
@@ -25,6 +36,10 @@ map <Leader>B :w<CR>:!ghc -fglasgow-exts --make -O2 -W '%' -o '%<'
 " (i)nterpret
 map <Leader>i :w<CR>:!ghci -fglasgow-exts -i. %<CR>
 map <Leader>I :w<CR>:!ghci -fglasgow-exts -i. %
+
+" interperet with just the (m)odule imports
+map <Leader>m :w<CR>:!ghci -fglasgow-exts -i. JustTheModules()<CR>
+map <Leader>M :w<CR>:!ghci -fglasgow-exts -i. JustTheModules()
 
 " (q)uick shell
 map <Leader>s :!ghci<CR>
