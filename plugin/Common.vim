@@ -45,6 +45,6 @@ set noswapfile
 
 " Timeouts
 " No delay before inserting characters, etc.
-set timeoutlen=0
+" set timeoutlen=0
 " User arrow keys for navigation in insert mode.
-set esckeys
+set noesckeys

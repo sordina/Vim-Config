@@ -19,10 +19,18 @@ set ai
 " Helper Functions "
 "------------------"
 
-function! JustTheModules()
-	let path = tempname()
-	" g/^import.*/y A
-	return path
+function! JustTheModules ()
+	let mypath = tempname()
+	g/^import.*/y A
+	bn mypath
+	set buftype=nofile
+	set bufhidden=hide
+	setlocal noswapfile
+	" Somehow paste to the new buffer
+	" Save the new buffer
+	system("ghci -fglasgow-exts -i. ", mypath)
+	bd! mypath
+	delete mypath
 endfunction
 
 "-----------"
@@ -38,8 +46,8 @@ map <Leader>i :w<CR>:!ghci -fglasgow-exts -i. %<CR>
 map <Leader>I :w<CR>:!ghci -fglasgow-exts -i. %
 
 " interperet with just the (m)odule imports
-map <Leader>m :w<CR>:!ghci -fglasgow-exts -i. JustTheModules()<CR>
-map <Leader>M :w<CR>:!ghci -fglasgow-exts -i. JustTheModules()
+map <Leader>m :w<CR>JustTheModules()<CR>
+map <Leader>M :w<CR>JustTheModules()
 
 " (q)uick shell
 map <Leader>s :!ghci<CR>
