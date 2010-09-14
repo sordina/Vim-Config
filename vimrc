@@ -1,6 +1,7 @@
 " We're running Vim, not Vi!
 "
 set nocompatible
+set hidden
 
 " Terminal Encodings
 "
@@ -34,6 +35,7 @@ set guioptions-=T
 set linebreak
 set wrap
 set hlsearch
+set incsearch
 set ignorecase
 set tabstop=2
 set shiftwidth=2

@@ -48,3 +48,10 @@ set noswapfile
 " set timeoutlen=0
 " User arrow keys for navigation in insert mode.
 set noesckeys
+
+" Jumps by visual line rather than logical line. For really long lines. :D
+nnoremap j gj
+nnoremap k gk
+
+" Unsearch
+nmap <silent> <space> :let @/=""<CR>
