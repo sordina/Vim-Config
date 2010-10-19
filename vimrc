@@ -36,7 +36,9 @@ set linebreak
 set wrap
 set hlsearch
 set incsearch
+set showmatch " Bracket matching
 set ignorecase
+set smartcase
 set tabstop=2
 set shiftwidth=2
 set ai
