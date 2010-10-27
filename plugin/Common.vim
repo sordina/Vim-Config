@@ -13,6 +13,9 @@ map <Leader><Leader>> :bn<CR>
 " Nerd Tree
 map <Leader><Leader>a :NERDTreeToggle<CR>
 
+" GUndo
+map <Leader><Leader>u :GundoToggle<CR>
+
 " Fuzzy Finder
 map <Leader><Leader>F :FuzzyFinderFile!<CR>
 map <Leader><Leader>f :FuzzyFinderFile<CR>
