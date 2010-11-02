@@ -17,6 +17,11 @@ else
         set t_Co=16
 endif
 
+" FISH fix
+if $SHELL =~ 'bin/fish'
+	set shell=/bin/sh
+endif
+
 " Environment
 "
 let $PATH = $PATH . ":/opt/local/bin"
@@ -24,9 +29,9 @@ filetype plugin indent on
 
 " GUI Tweaks
 "
-colorscheme rdark_temoto
+"colorscheme rdark_temoto
 "colorscheme zenburn
-"colorscheme desert
+colorscheme desert
 "colorscheme wombat
 syntax on
 
