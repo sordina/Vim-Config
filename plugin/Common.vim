@@ -9,6 +9,7 @@ map <Leader><Leader>i :set paste<CR>
 map <Leader><Leader>I :set nopaste<CR>
 map <Leader><Leader>< :bp<CR>
 map <Leader><Leader>> :bn<CR>
+map <Leader><Leader>w /\s\+$<CR>
 
 " Nerd Tree
 map <Leader><Leader>a :NERDTreeToggle<CR>
@@ -34,7 +35,7 @@ elseif has("mac")
 endif
 
 " Paths
-map <Leader><Leader>y :let @*=expand('%:p')<CR> :let @p=expand('%:p')<CR>
+map <Leader><Leader>y :let @*=expand('%:p')<CR>:let @p=expand('%:p')<CR>
 map <Leader><Leader>Y :let @*=expand('%:p')
 
 " Listing -> :he 'lcs
@@ -58,3 +59,7 @@ nnoremap k gk
 
 " Unsearch
 nmap <silent> <space> :let @/=""<CR>
+
+" Edit todo file
+map <Leader><Leader>t :tabnew ~/TODO.txt<CR>
+map <Leader><Leader>T :tabnew ~/TODO.txt

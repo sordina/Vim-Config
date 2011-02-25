@@ -29,14 +29,16 @@ filetype plugin indent on
 
 " GUI Tweaks
 "
+colorscheme ir_black
 "colorscheme rdark_temoto
 "colorscheme zenburn
-colorscheme desert
+"colorscheme desert
 "colorscheme wombat
 syntax on
 
 set shortmess=aTItoO
 set guioptions-=T
+"set foldcolumn=2
 set linebreak
 set wrap
 set hlsearch
@@ -51,3 +53,7 @@ set ai
 " Mac specific copy command
 "
 command! -range=% Copy :<line1>,<line2>w !pbcopy
+
+" GUI Fonts
+"
+set guifont=Monaco:h12

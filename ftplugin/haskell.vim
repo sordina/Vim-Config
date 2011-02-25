@@ -7,6 +7,7 @@
 "-----------------"
 
 " source $HOME/.vim/ftplugin/haskell_indent.vim
+" source $HOME/.vim/ftplugin/tslime.vim
 
 set ts=2
 set st=2
@@ -78,7 +79,7 @@ map <Leader>l :w<CR>:! hlint --color '%'<CR>
 map <Leader>L :w<CR>:! hlint --color '%'
 
 " (s)earch hoogle
-map <Leader>s :! hoogle
+map <Leader>s :! hoogle 
 map <Leader>S :! hoogle --info "
 
 " Cabal (f)unctions
