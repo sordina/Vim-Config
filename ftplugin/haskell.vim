@@ -15,6 +15,7 @@ set sw=2
 set expandtab
 set ai
 
+let hs_highlight_debug = 1
 
 "------------------"
 " Helper Functions "
@@ -29,7 +30,7 @@ function! JustTheModules ()
 	setlocal noswapfile
 	" Somehow paste to the new buffer
 	" Save the new buffer
-	system("ghci -fglasgow-exts -i. ", mypath)
+	system("ghci -i. ", mypath)
 	bd! mypath
 	delete mypath
 endfunction
@@ -39,12 +40,12 @@ endfunction
 "-----------"
 
 " (b)uild
-map <Leader>b :w<CR>:!ghc -fglasgow-exts --make -O2 -L/usr/lib -W '%' -o '%<'<CR>
-map <Leader>B :w<CR>:!ghc -fglasgow-exts --make -O2 -L/usr/lib -W '%' -o '%<'
+map <Leader>b :w<CR>:!ghc --make -O2 -L/usr/lib -W '%' -o '%<'<CR>
+map <Leader>B :w<CR>:!ghc --make -O2 -L/usr/lib -W '%' -o '%<'
 
 " (i)nterpret
-map <Leader>i :w<CR>:!ghci -fglasgow-exts -L/usr/lib -i. %<CR>
-map <Leader>I :w<CR>:!ghci -fglasgow-exts -L/usr/lib -i. %
+map <Leader>i :w<CR>:!ghci -L/usr/lib -i. %<CR>
+map <Leader>I :w<CR>:!ghci -L/usr/lib -i. %
 
 " interperet with just the (m)odule imports
 map <Leader>m :w<CR>JustTheModules()<CR>
@@ -59,20 +60,20 @@ map <Leader>t :w<CR>:!quickcheck +names %<CR>
 map <Leader>T :w<CR>:!quickcheck +names %
 
 " (r)un built version
-map <Leader>r :w<CR>:!ghc -fglasgow-exts --make -O2 -L/usr/lib -W '%' -o '%<' && ./%<<CR>
-map <Leader>R :w<CR>:!ghc -fglasgow-exts --make -O2 -L/usr/lib -W '%' -o '%<' && ./%<
+map <Leader>r :w<CR>:!ghc --make -O2 -L/usr/lib -W '%' -o '%<' && ./%<<CR>
+map <Leader>R :w<CR>:!ghc --make -O2 -L/usr/lib -W '%' -o '%<' && ./%<
 
 " (c)un concurrent built version
-map <Leader>c :w<CR>:!ghc -fglasgow-exts --make -W -O2 -L/usr/lib -threaded '%' -o '%<' && ./%< +RTS -N2<CR>
-map <Leader>C :w<CR>:!ghc -fglasgow-exts --make -W -O2 -L/usr/lib -threaded '%' -o '%<' && ./%< +RTS -N2
+map <Leader>c :w<CR>:!ghc --make -W -O2 -L/usr/lib -threaded '%' -o '%<' && ./%< +RTS -N2<CR>
+map <Leader>C :w<CR>:!ghc --make -W -O2 -L/usr/lib -threaded '%' -o '%<' && ./%< +RTS -N2
 
 " Interpret (a)nd run
 map <Leader>a :w<CR>:!runhaskell %<CR>
 map <Leader>A :w<CR>:!runhaskell %
 
 " (p)rofile
-map <Leader>p :w<CR>:!ghc -fglasgow-exts --make -W -L/usr/lib -prof -auto-all '%' -o '%<' && ./'%<' +RTS -p -RTS && cat '%<.prof'<CR>
-map <Leader>P :w<CR>:!ghc -fglasgow-exts --make -W -L/usr/lib -prof -auto-all '%' -o '%<' && ./'%<' +RTS -p -RTS && cat '%<.prof'
+map <Leader>p :w<CR>:!ghc --make -W -L/usr/lib -prof -auto-all '%' -o '%<' && ./'%<' +RTS -p -RTS && cat '%<.prof'<CR>
+map <Leader>P :w<CR>:!ghc --make -W -L/usr/lib -prof -auto-all '%' -o '%<' && ./'%<' +RTS -p -RTS && cat '%<.prof'
 
 " (l)int
 map <Leader>l :w<CR>:! hlint --color '%'<CR>

@@ -27,25 +27,25 @@
 "
 "  brown: #E18964  good for special
 "
-"  lightpurpleish: #FFCCFF
+"  lightpurpleish: #ffccff
 "
-" Interface colors:
+" interface colors:
 "  background color: black
-"  cursor (where underscore is used): #FFA560  255:165:96
+"  cursor (where underscore is used): #ffa560  255:165:96
 "  cursor (where block is used): white
-"  visual selection: #1D1E2C
+"  visual selection: #1d1e2c
 "  current line: #151515  21:21:21
-"  search selection: #07281C  7:40:28
-"  line number: #3D3D3D  61:61:61
+"  search selection: #07281c  7:40:28
+"  line number: #3d3d3d  61:61:61
 
 
 " ********************************************************************************
-" The following are the preferred 16 colors for your terminal
-"           Colors      Bright Colors
-" Black     #4E4E4E     #7C7C7C
-" Red       #FF6C60     #FFB6B0
-" Green     #A8FF60     #CEFFAB
-" Yellow    #FFFFB6     #FFFFCB
+" the following are the preferred 16 colors for your terminal
+"           colors      bright colors
+" black     #4e4e4e     #7c7c7c
+" red       #ff6c60     #ffb6b0
+" green     #a8ff60     #ceffab
+" yellow    #ffffb6     #ffffcb
 " Blue      #96CBFE     #FFFFCB
 " Magenta   #FF73FD     #FF9CFE
 " Cyan      #C6C5FE     #DFDFFE
@@ -65,9 +65,11 @@ let colors_name = "ir_black"
 
 "hi Example         guifg=NONE        guibg=NONE        gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=NONE
 
+"set cursorline
+
 " General colors
 hi Normal           guifg=#f6f3e8     guibg=black       gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=NONE
-hi NonText          guifg=#070707     guibg=black       gui=NONE      ctermfg=black       ctermbg=NONE        cterm=NONE
+hi NonText          guifg=#070707     guibg=black       gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=NONE
 
 hi Cursor           guifg=black       guibg=white       gui=NONE      ctermfg=black       ctermbg=white       cterm=reverse
 hi LineNr           guifg=#3D3D3D     guibg=black       gui=NONE      ctermfg=darkgray    ctermbg=NONE        cterm=NONE
@@ -78,7 +80,7 @@ hi StatusLineNC     guifg=black       guibg=#202020     gui=NONE      ctermfg=bl
 
 hi Folded           guifg=#a0a8b0     guibg=#384048     gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=NONE
 hi Title            guifg=#f6f3e8     guibg=NONE        gui=bold      ctermfg=NONE        ctermbg=NONE        cterm=NONE
-hi Visual           guifg=NONE        guibg=#262D51     gui=NONE      ctermfg=NONE        ctermbg=darkgray    cterm=NONE
+hi Visual           guifg=NONE        guibg=#262D51     gui=NONE      ctermfg=NONE        ctermbg=gray    cterm=NONE
 
 hi SpecialKey       guifg=#808080     guibg=#343434     gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=NONE
 
@@ -94,12 +96,12 @@ hi WarningMsg       guifg=white       guibg=#FF6C60     gui=BOLD      ctermfg=wh
 hi ModeMsg          guifg=black       guibg=#C6C5FE     gui=BOLD      ctermfg=black       ctermbg=cyan        cterm=BOLD
 
 if version >= 700 " Vim 7.x specific colors
-  hi CursorLine     guifg=NONE        guibg=#121212     gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=BOLD
+  hi CursorLine     guifg=NONE        guibg=#121212     gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=NONE
   hi CursorColumn   guifg=NONE        guibg=#121212     gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=BOLD
   hi MatchParen     guifg=#f6f3e8     guibg=#857b6f     gui=BOLD      ctermfg=white       ctermbg=darkgray    cterm=NONE
   hi Pmenu          guifg=#f6f3e8     guibg=#444444     gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=NONE
   hi PmenuSel       guifg=#000000     guibg=#cae682     gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=NONE
-  hi Search         guifg=NONE        guibg=NONE        gui=underline ctermfg=NONE        ctermbg=NONE        cterm=underline
+  hi Search         guifg=NONE        guibg=NONE        gui=NONE      ctermfg=darkgrey    ctermbg=darkmagenta     cterm=NONE
 endif
 
 " Syntax highlighting

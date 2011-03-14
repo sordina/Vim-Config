@@ -29,6 +29,7 @@ filetype plugin indent on
 
 " GUI Tweaks
 "
+"colorscheme sorcerer
 colorscheme ir_black
 "colorscheme rdark_temoto
 "colorscheme zenburn
