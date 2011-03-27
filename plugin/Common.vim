@@ -61,5 +61,5 @@ nnoremap k gk
 nmap <silent> <space> :let @/=""<CR>
 
 " Edit todo file
-map <Leader><Leader>t :tabnew ~/TODO.txt<CR>
-map <Leader><Leader>T :tabnew ~/TODO.txt
+map <Leader><Leader>t :tabnew ~/Documents/Archive/TODO.txt<CR>
+map <Leader><Leader>T :tabnew ~/Documents/Archive/TODO.txt

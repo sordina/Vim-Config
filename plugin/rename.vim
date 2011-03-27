@@ -38,12 +38,13 @@ function! s:RefactRename(mode)
 		return
 	endif
 
-	let l:safeoldname = substitute(l:oldname, "\\\\|/", "\\\\1", "g")
+	let l:safeoldname = substitute(l:oldname, "/", "\\\\/", "g")
+	let l:safeoldname = substitute(l:safeoldname, '\', '\\\\',"g")
 
 	if a:mode == 1
-		execute ':%s/'.l:safeoldname.'/'.l:newname.'/g'
+		execute ':%s/\V'.l:safeoldname.'/'.l:newname.'/g'
 	elseif a:mode == 0
-		execute ':%s/\<'.l:safeoldname.'\>/'.l:newname.'/g'
+		execute ':%s/\V\<'.l:safeoldname.'\>/'.l:newname.'/g'
 	endif
 endfunction
 
