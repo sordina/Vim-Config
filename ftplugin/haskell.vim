@@ -21,18 +21,36 @@ let hs_highlight_debug = 1
 " Helper Functions "
 "------------------"
 
-function! JustTheModules ()
-	let mypath = tempname()
-	g/^import.*/y A
-	bn mypath
-	set buftype=nofile
-	set bufhidden=hide
-	setlocal noswapfile
-	" Somehow paste to the new buffer
-	" Save the new buffer
-	system("ghci -i. ", mypath)
-	bd! mypath
-	delete mypath
+" TODO: Fix the function definition so that it isn't called when loading the file for ghci
+function! s:JustTheModules()
+
+	" Save matches into register 'a'
+	let l:a_save = @a
+	let @a = ""
+	execute ':g/^import.*/y A'
+
+	" Create a temporary file for ghci to work with
+	let l:mypath = tempname()
+	let l:mypath = l:mypath . '.hs'
+	execute ':new ' . l:mypath
+
+	" set buftype=nofile
+	" set bufhidden=hide
+	" setlocal noswapfile
+
+	" Paste the import statements
+	normal! "ap
+
+	" Restore register 'a'
+	let @a = l:a_save
+
+	" Save the file and run ghci
+	execute ':w'
+	execute ':silent !ghci -i. ' . l:mypath
+
+	" Delete the buffer and the file
+	execute ':bd! ' . l:mypath
+	execute ':silent !rm ' . l:mypath
 endfunction
 
 "-----------"
@@ -48,8 +66,8 @@ map <Leader>i :w<CR>:!ghci -L/usr/lib -i. %<CR>
 map <Leader>I :w<CR>:!ghci -L/usr/lib -i. %
 
 " interperet with just the (m)odule imports
-map <Leader>m :w<CR>JustTheModules()<CR>
-map <Leader>M :w<CR>JustTheModules()
+map <Leader>m :w<CR>:call <SID>JustTheModules()<CR>
+map <Leader>M :w<CR>:call <SID>JustTheModules()
 
 " (q)uick shell
 map <Leader>s :!ghci<CR>
