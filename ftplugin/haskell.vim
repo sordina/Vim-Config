@@ -21,36 +21,33 @@ let hs_highlight_debug = 1
 " Helper Functions "
 "------------------"
 
-" TODO: Fix the function definition so that it isn't called when loading the file for ghci
 function! s:JustTheModules()
 
-	" Save matches into register 'a'
-	let l:a_save = @a
-	let @a = ""
-	execute ':g/^import.*/y A'
+	" Save position
+	let l:olda = @a
+	normal! ma
 
 	" Create a temporary file for ghci to work with
 	let l:mypath = tempname()
 	let l:mypath = l:mypath . '.hs'
-	execute ':new ' . l:mypath
 
-	" set buftype=nofile
-	" set bufhidden=hide
-	" setlocal noswapfile
+	" Send imports to file
+	execute ':redir >' . l:mypath
+	execute ':g/^import/'
+	execute ':redir END'
 
-	" Paste the import statements
-	normal! "ap
-
-	" Restore register 'a'
-	let @a = l:a_save
-
-	" Save the file and run ghci
-	execute ':w'
+	" Run ghci
 	execute ':silent !ghci -i. ' . l:mypath
 
-	" Delete the buffer and the file
-	execute ':bd! ' . l:mypath
+	" Delete the file
 	execute ':silent !rm ' . l:mypath
+
+	" Refresh the screen to fix 'silent' issues
+	execute ':redraw!'
+
+	" Restore position
+	normal! `a
+	let @a = l:olda
 endfunction
 
 "-----------"
