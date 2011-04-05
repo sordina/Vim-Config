@@ -49,9 +49,9 @@ set noswapfile
 
 " Timeouts
 " No delay before inserting characters, etc.
-" set timeoutlen=0
 " User arrow keys for navigation in insert mode.
-set noesckeys
+" set noesckeys
+set timeoutlen=0
 
 " Jumps by visual line rather than logical line. For really long lines. :D
 nnoremap j gj
