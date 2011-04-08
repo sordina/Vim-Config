@@ -39,6 +39,9 @@ syntax on
 
 set shortmess=aTItoO
 set guioptions-=T
+set guioptions-=r
+set guioptions-=L
+
 "set foldcolumn=2
 set linebreak
 set wrap
