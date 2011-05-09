@@ -54,6 +54,9 @@ set tabstop=2
 set shiftwidth=2
 set ai
 
+" Status Line
+" set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v][%p%%]\ [LEN=%L]
+
 " Mac specific copy command
 "
 command! -range=% Copy :<line1>,<line2>w !pbcopy

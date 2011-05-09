@@ -83,8 +83,8 @@ map <Leader>a :w<CR>:!runhaskell %<CR>
 map <Leader>A :w<CR>:!runhaskell %
 
 " (p)rofile
-map <Leader>p :w<CR>:!ghc --make -W -L/usr/lib -prof -auto-all '%' -o '%<' && ./'%<' +RTS -p -RTS && cat '%<.prof'<CR>
-map <Leader>P :w<CR>:!ghc --make -W -L/usr/lib -prof -auto-all '%' -o '%<' && ./'%<' +RTS -p -RTS && cat '%<.prof'
+map <Leader>p :w<CR>:!ghc --make -rtsopts -W -L/usr/lib -prof -auto-all '%' -o '%<' && ./'%<' +RTS -p -RTS && cat '%<.prof'<CR>
+map <Leader>P :w<CR>:!ghc --make -rtsopts -W -L/usr/lib -prof -auto-all '%' -o '%<' && ./'%<' +RTS -p -RTS && cat '%<.prof'
 
 " (l)int
 map <Leader>l :w<CR>:! hlint --color '%'<CR>
