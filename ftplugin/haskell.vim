@@ -55,8 +55,8 @@ map <Leader>b :w<CR>:!ghc --make -O2 -W '%' -o '%<'<CR>
 map <Leader>B :w<CR>:!ghc --make -O2 -W '%' -o '%<'
 
 " (i)nterpret
-map <Leader>i :w<CR>:!ghci -i. %<CR>
-map <Leader>I :w<CR>:!ghci -i. %
+map <Leader>i :w<CR>:!ghci -W -i. '%'<CR>
+map <Leader>I :w<CR>:!ghci -W -i. '%'
 
 " interperet with just the (m)odule imports
 map <Leader>m :w<CR>:call <SID>JustTheModules()<CR>
@@ -67,8 +67,8 @@ map <Leader>s :!ghci<CR>
 map <Leader>S :!ghci
 
 " (w)arnings
-map <Leader>w :w<CR>:!ghci -i. -W %<CR>
-map <Leader>W :w<CR>:!ghci -i. -W %
+map <Leader>w :w<CR>:!ghci -i. -W '%'<CR>
+map <Leader>W :w<CR>:!ghci -i. -W '%'
 
 " (t)est with quickcheck
 map <Leader>t :w<CR>:!quickcheck +names %<CR>
