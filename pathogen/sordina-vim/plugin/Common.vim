@@ -19,6 +19,20 @@ set ai
 
 syntax on
 
+" hs_highlight_delimiters - Highlight delimiter characters--users with a light-colored background will probably want to turn this on.
+let hs_highlight_delimiters = 1
+
+" hs_highlight_boolean - Treat True and False as keywords.
+let hs_highlight_boolean = 1
+
+" hs_highlight_types - Treat names of primitive types as keywords.
+let hs_highlight_types = 1
+
+" hs_highlight_debug - Highlight names of debugging functions.
+let hs_highlight_debug = 1
+
+" hs_allow_hash_operator - Don't highlight seemingly incorrect C preprocessor directives but assume them to be operators
+
 filetype plugin indent on
 
 " Listing -> :he 'lcs
