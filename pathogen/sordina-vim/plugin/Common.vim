@@ -59,11 +59,11 @@ nmap <silent> <space> :let @/=""<CR>
 let mapleader=";"
 let maplocaleader=";"
 
-set pastetoggle=;;i
+" set pastetoggle=;;i " Causes issues when coding in insert mode with semi-colons
 
 map <Leader><Leader>a :NERDTreeToggle<CR>
 map <Leader><Leader>u :GundoToggle<CR>
-nmap <Leader><Leader>s :call InitShell()<cr>
+map <Leader><Leader>s :call InitShell()<cr>
 
 " ---- Conditional Items
 
