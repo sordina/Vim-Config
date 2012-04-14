@@ -42,7 +42,7 @@ endfunction
 "-----------"
 
 " (t)ype of expression
-map <buffer> <Leader>e "eyyme:.!ghc -i. "%" -e ':t <cword>'<CR>"ePI-- <esc>`e
+map <buffer> <Leader>e :w<CR>me"eyy:.!ghc -i. "%" -e ':t <cword>'<CR>"epkI-- <esc>`ej
 
 " (b)uild
 map <buffer> <Leader>b :w<CR>:!ghc --make -hidir /tmp -odir /tmp  -O2 -W "%" -o "%<"<CR>
