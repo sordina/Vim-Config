@@ -41,6 +41,9 @@ endfunction
 " Shortcuts "
 "-----------"
 
+" (t)ype of expression
+map <buffer> <Leader>e "eyyme:.!ghc -i. "%" -e ':t <cword>'<CR>"ePI-- <esc>`e
+
 " (b)uild
 map <buffer> <Leader>b :w<CR>:!ghc --make -hidir /tmp -odir /tmp  -O2 -W "%" -o "%<"<CR>
 map <buffer> <Leader>B :w<CR>:!ghc --make -hidir /tmp -odir /tmp  -O2 -W "%" -o "%<"
