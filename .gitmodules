@@ -1,3 +1,6 @@
 [submodule "pathogen/sjl-gundo"]
 	path = pathogen/sjl-gundo
 	url = https://github.com/sjl/gundo.vim.git
+[submodule "pathogen/html-template-syntax"]
+	path = pathogen/html-template-syntax
+	url = https://github.com/pbrisbin/html-template-syntax.git
