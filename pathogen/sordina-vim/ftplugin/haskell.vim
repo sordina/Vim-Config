@@ -50,20 +50,12 @@ map <buffer> <Leader>b :w<CR>:!ghc --make -hidir /tmp -odir /tmp  -O2 -W "%" -o 
 map <buffer> <Leader>B :w<CR>:!ghc --make -hidir /tmp -odir /tmp  -O2 -W "%" -o "%<"
 
 " (i)nterpret
-map <buffer> <Leader>i :w<CR>:!ghci -W -i. "%"<CR>
-map <buffer> <Leader>I :w<CR>:!ghci -W -i. "%"
+map <buffer> <Leader>i :w<CR>:!ghci -Wall -XTemplateHaskell -XQuasiQuotes -i. "%"<CR>
+map <buffer> <Leader>I :w<CR>:!ghci -Wall -XTemplateHaskell -XQuasiQuotes -i. "%"
 
 " interperet with just the (m)odule imports
 map <buffer> <Leader>m :w<CR>:call <SID>JustTheModules()<CR>
 map <buffer> <Leader>M :w<CR>:call <SID>JustTheModules()
-
-" (q)uick shell
-map <buffer> <Leader>s :!ghci<CR>
-map <buffer> <Leader>S :!ghci
-
-" (w)arnings
-map <buffer> <Leader>w :w<CR>:!ghci -i. -W "%"<CR>
-map <buffer> <Leader>W :w<CR>:!ghci -i. -W "%"
 
 " (t)est with quickcheck
 map <buffer> <Leader>t :w<CR>:!quickcheck +names "%"<CR>
