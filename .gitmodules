@@ -4,3 +4,6 @@
 [submodule "pathogen/html-template-syntax"]
 	path = pathogen/html-template-syntax
 	url = https://github.com/pbrisbin/html-template-syntax.git
+[submodule "pathogen/ctrlp.vim"]
+	path = pathogen/ctrlp.vim
+	url = https://github.com/kien/ctrlp.vim.git
