@@ -81,3 +81,10 @@ endif
 if $SHELL =~ 'bin/fish'
 	set shell=/bin/sh
 endif
+
+" Ctrl-P Stuff
+let g:ctrlp_map = '<c-p>'
+" 0 - don’t manage working directory.
+" 1 - the parent directory of the current file.
+" 2 - the nearest ancestor that contains one of these directories or files: .git/ .hg/ .svn/ .bzr/ _darcs/
+let g:ctrlp_working_path_mode = 2
