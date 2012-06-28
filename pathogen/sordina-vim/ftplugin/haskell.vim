@@ -8,6 +8,9 @@ set expandtab
 " Helper Functions "
 "------------------"
 
+" https://github.com/ujihisa/neco-ghc
+setlocal omnifunc=necoghc#omnifunc
+
 function! s:JustTheModules()
 
 	" Save position
