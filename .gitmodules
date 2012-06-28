@@ -10,3 +10,6 @@
 [submodule "pathogen/tpope-vim-pathogen"]
 	path = pathogen/tpope-vim-pathogen
 	url = https://github.com/tpope/vim-pathogen.git
+[submodule "pathogen/neco-ghc"]
+	path = pathogen/neco-ghc
+	url = https://github.com/ujihisa/neco-ghc.git
