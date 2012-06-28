@@ -13,3 +13,6 @@
 [submodule "pathogen/neco-ghc"]
 	path = pathogen/neco-ghc
 	url = https://github.com/ujihisa/neco-ghc.git
+[submodule "pathogen/shakesperian-syntax"]
+	path = pathogen/shakesperian-syntax
+	url = https://github.com/pbrisbin/html-template-syntax.git
