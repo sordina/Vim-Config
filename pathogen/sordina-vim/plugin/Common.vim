@@ -77,6 +77,9 @@ elseif has("mac")
 	map <Leader><Leader>. :!open %:h<CR>
 endif
 
+" Time insertion
+map <Leader><Leader>t o<C-R>=strftime('%c')<CR><esc>
+
 " Special shells
 if $SHELL =~ 'bin/fish'
 	set shell=/bin/sh
