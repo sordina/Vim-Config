@@ -19,19 +19,11 @@ set ai
 
 syntax on
 
-" hs_highlight_delimiters - Highlight delimiter characters--users with a light-colored background will probably want to turn this on.
-let hs_highlight_delimiters = 1
-
-" hs_highlight_boolean - Treat True and False as keywords.
-let hs_highlight_boolean = 1
-
-" hs_highlight_types - Treat names of primitive types as keywords.
-let hs_highlight_types = 1
-
-" hs_highlight_debug - Highlight names of debugging functions.
-let hs_highlight_debug = 1
-
-" hs_allow_hash_operator - Don't highlight seemingly incorrect C preprocessor directives but assume them to be operators
+let hs_highlight_delimiters = 1 " hs_highlight_delimiters - Highlight delimiter characters--users with a light-colored background will probably want to turn this on.
+let hs_highlight_boolean    = 1 " hs_highlight_boolean - Treat True and False as keywords.
+let hs_highlight_types      = 1 " hs_highlight_types - Treat names of primitive types as keywords.
+let hs_highlight_debug      = 1 " hs_highlight_debug - Highlight names of debugging functions.
+let hs_allow_hash_operator  = 1 " Don't highlight seemingly incorrect C preprocessor directives but assume them to be operators
 
 filetype plugin indent on
 
@@ -43,6 +35,9 @@ else
 endif
 
 set list
+
+" File type detection
+autocmd BufNewFile,BufRead todo.txt,TODO.txt set filetype=todo
 
 " Jumps by visual line rather than logical line. For really long lines. :D
 nnoremap j gj
@@ -87,8 +82,4 @@ endif
 
 " Ctrl-P Stuff
 nmap <c-p> :CtrlPMixed<CR>
-" let g:ctrlp_map = '<c-p>'
-" 0 - don’t manage working directory.
-" 1 - the parent directory of the current file.
-" 2 - the nearest ancestor that contains one of these directories or files: .git/ .hg/ .svn/ .bzr/ _darcs/
 let g:ctrlp_working_path_mode = 2
