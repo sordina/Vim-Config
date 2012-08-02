@@ -85,7 +85,7 @@ map <buffer> <Leader>l :w<CR>:! hlint --color "%"<CR>
 map <buffer> <Leader>L :w<CR>:! hlint --color "%"
 
 " (s)earch hoogle
-map <buffer> <Leader>s :! hoogle 
+map <buffer> <Leader>s :! hoogle search --color 
 map <buffer> <Leader>S :! hoogle --info "
 
 " Cabal (f)unctions
