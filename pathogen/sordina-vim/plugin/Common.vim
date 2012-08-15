@@ -17,6 +17,8 @@ set tabstop=2
 set shiftwidth=2
 set ai
 
+set clipboard+=unnamedplus
+
 syntax on
 
 let hs_highlight_delimiters = 1 " hs_highlight_delimiters - Highlight delimiter characters--users with a light-colored background will probably want to turn this on.
