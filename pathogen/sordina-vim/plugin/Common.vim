@@ -17,7 +17,9 @@ set tabstop=2
 set shiftwidth=2
 set ai
 
-set clipboard+=unnamedplus
+if has('unnamedplus')
+	set clipboard+=unnamedplus
+endif
 
 syntax on
 
