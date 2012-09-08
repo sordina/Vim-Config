@@ -25,3 +25,6 @@
 [submodule "pathogen/jellybeans"]
 	path = pathogen/jellybeans
 	url = https://github.com/nanotech/jellybeans.vim
+[submodule "pathogen/jade"]
+	path = pathogen/jade
+	url = https://github.com/digitaltoad/vim-jade.git
