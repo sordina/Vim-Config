@@ -19,3 +19,9 @@
 [submodule "pathogen/kien-ctrl-p"]
 	path = pathogen/kien-ctrl-p
 	url = https://github.com/kien/ctrlp.vim.git
+[submodule "pathogen/vim-hybrid-colors"]
+	path = pathogen/vim-hybrid-colors
+	url = https://github.com/w0ng/vim-hybrid.git
+[submodule "pathogen/jellybeans"]
+	path = pathogen/jellybeans
+	url = https://github.com/nanotech/jellybeans.vim

@@ -17,8 +17,13 @@ set tabstop=2
 set shiftwidth=2
 set ai
 
+if has('unnamedplus')
+	set clipboard+=unnamedplus
+endif
+
 syntax on
 
+" Haskell syntax
 let hs_highlight_delimiters = 1 " hs_highlight_delimiters - Highlight delimiter characters--users with a light-colored background will probably want to turn this on.
 let hs_highlight_boolean    = 1 " hs_highlight_boolean - Treat True and False as keywords.
 let hs_highlight_types      = 1 " hs_highlight_types - Treat names of primitive types as keywords.
@@ -26,6 +31,8 @@ let hs_highlight_debug      = 1 " hs_highlight_debug - Highlight names of debugg
 let hs_allow_hash_operator  = 1 " Don't highlight seemingly incorrect C preprocessor directives but assume them to be operators
 
 filetype plugin indent on
+
+colorscheme Tomorrow-Night-Bright
 
 " Listing -> :he 'lcs
 if has("multi_byte")
@@ -37,7 +44,8 @@ endif
 set list
 
 " File type detection
-autocmd BufNewFile,BufRead todo.txt,TODO.txt set filetype=todo
+autocmd BufNewFile,BufRead *.ijs,*.ijt,*.ijp,*.ijx,*.j set filetype=jsoftware
+autocmd BufNewFile,BufRead todo.txt,TODO.txt           set filetype=todo
 
 " Jumps by visual line rather than logical line. For really long lines. :D
 nnoremap j gj
