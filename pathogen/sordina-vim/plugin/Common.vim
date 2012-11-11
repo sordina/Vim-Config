@@ -42,6 +42,7 @@ else
 endif
 
 set list
+set nowrap
 
 " File type detection
 autocmd BufNewFile,BufRead *.ijs,*.ijt,*.ijp,*.ijx,*.j set filetype=jsoftware
