@@ -21,6 +21,8 @@ if has('unnamedplus')
 	set clipboard+=unnamedplus
 endif
 
+let vimclojure#WantNailgun = 1
+
 syntax on
 
 " Haskell syntax
