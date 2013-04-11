@@ -38,7 +38,7 @@ colorscheme Tomorrow-Night-Bright
 
 " Listing -> :he 'lcs
 if has("multi_byte")
-	set lcs=tab:\▸\ ,trail:_
+	set lcs=tab:\│\ ,trail:_
 else
 	set lcs=tab:\|\ ,trail:_
 endif
@@ -70,6 +70,7 @@ let maplocaleader=";"
 map <Leader><Leader>a :NERDTreeToggle<CR>
 map <Leader><Leader>u :GundoToggle<CR>
 map <Leader><Leader>s :call InitShell()<cr>
+map <Leader><Leader>l :! tabulate<cr>
 
 " ---- Conditional Items
 
