@@ -56,6 +56,10 @@ map <buffer> <Leader>B :w<CR>:!ghc --make -hidir /tmp -odir /tmp  -O2 -W "%" -o 
 map <buffer> <Leader>i :w<CR>:!ghci -Wall -XTemplateHaskell -XQuasiQuotes -i. "%"<CR>
 map <buffer> <Leader>I :w<CR>:!ghci -Wall -XTemplateHaskell -XQuasiQuotes -i. "%"
 
+" (d)efer type errors
+map <buffer> <Leader>d :w<CR>:!ghci -Wall -XTemplateHaskell -XQuasiQuotes -fdefer-type-errors -i. "%"<CR>
+map <buffer> <Leader>D :w<CR>:!ghci -Wall -XTemplateHaskell -XQuasiQuotes -fdefer-type-errors -i. "%"
+
 " interperet with just the (m)odule imports
 map <buffer> <Leader>m :w<CR>:call <SID>JustTheModules()<CR>
 map <buffer> <Leader>M :w<CR>:call <SID>JustTheModules()
