@@ -31,3 +31,6 @@
 [submodule "pathogen/coffee-script"]
 	path = pathogen/coffee-script
 	url = https://github.com/kchmck/vim-coffee-script.git
+[submodule "pathogen/tpope-surround"]
+	path = pathogen/tpope-surround
+	url = git://github.com/tpope/vim-surround.git
