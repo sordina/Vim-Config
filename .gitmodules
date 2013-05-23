@@ -34,3 +34,6 @@
 [submodule "pathogen/tpope-surround"]
 	path = pathogen/tpope-surround
 	url = git://github.com/tpope/vim-surround.git
+[submodule "pathogen/slim"]
+	path = pathogen/slim
+	url = git://github.com/slim-template/vim-slim.git
