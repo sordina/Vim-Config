@@ -37,3 +37,12 @@
 [submodule "pathogen/slim"]
 	path = pathogen/slim
 	url = git://github.com/slim-template/vim-slim.git
+[submodule "pathogen/vim-fireplace"]
+	path = pathogen/vim-fireplace
+	url = git://github.com/tpope/vim-fireplace.git
+[submodule "pathogen/vim-classpath"]
+	path = pathogen/vim-classpath
+	url = git://github.com/tpope/vim-classpath.git
+[submodule "pathogen/vim-clojure-static"]
+	path = pathogen/vim-clojure-static
+	url = git://github.com/guns/vim-clojure-static.git
