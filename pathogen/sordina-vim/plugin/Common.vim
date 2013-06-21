@@ -71,6 +71,7 @@ map <Leader><Leader>a :NERDTreeToggle<CR>
 map <Leader><Leader>u :GundoToggle<CR>
 map <Leader><Leader>s :call InitShell()<cr>
 map <Leader><Leader>l :! tabulate<cr>
+map gs :vsplit<cr> gf
 
 " ---- Conditional Items
 
