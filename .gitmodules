@@ -54,4 +54,4 @@
 	url = https://github.com/vim-scripts/paredit.vim.git
 [submodule "pathogen/rainbow"]
 	path = pathogen/rainbow
-	url = https://github.com/vim-scripts/Rainbow-Parenthesis.git
+	url = https://github.com/sordina/Rainbow-Parenthesis.git
