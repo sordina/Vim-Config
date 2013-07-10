@@ -46,3 +46,6 @@
 [submodule "pathogen/vim-clojure-static"]
 	path = pathogen/vim-clojure-static
 	url = git://github.com/guns/vim-clojure-static.git
+[submodule "pathogen/applescript"]
+	path = pathogen/applescript
+	url = https://github.com/vim-scripts/applescript.vim.git
