@@ -55,3 +55,6 @@
 [submodule "pathogen/rainbow"]
 	path = pathogen/rainbow
 	url = https://github.com/sordina/Rainbow-Parenthesis.git
+[submodule "pathogen/vim-pandoc"]
+	path = pathogen/vim-pandoc
+	url = https://github.com/vim-pandoc/vim-pandoc.git
