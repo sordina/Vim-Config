@@ -58,3 +58,6 @@
 [submodule "pathogen/vim-pandoc"]
 	path = pathogen/vim-pandoc
 	url = https://github.com/vim-pandoc/vim-pandoc.git
+[submodule "pathogen/vim-dispatch"]
+	path = pathogen/vim-dispatch
+	url = https://github.com/tpope/vim-dispatch.git
