@@ -61,3 +61,6 @@
 [submodule "pathogen/vim-dispatch"]
 	path = pathogen/vim-dispatch
 	url = https://github.com/tpope/vim-dispatch.git
+[submodule "pathogen/nerdtree"]
+	path = pathogen/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
