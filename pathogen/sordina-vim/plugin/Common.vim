@@ -65,8 +65,6 @@ nmap <silent> <space> :let @/=""<CR>
 let mapleader=";"
 let maplocaleader=";"
 
-" set pastetoggle=;;i " Causes issues when coding in insert mode with semi-colons
-
 map <Leader><Leader>a :NERDTreeToggle<CR>
 map <Leader><Leader>u :GundoToggle<CR>
 map <Leader><Leader>s :call InitShell()<cr>
