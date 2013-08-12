@@ -64,6 +64,7 @@ nmap <silent> <space> :let @/=""<CR>
 
 let mapleader=";"
 let maplocaleader=";"
+let g:NERDTreeMapHelp=""
 
 map <Leader><Leader>a :NERDTreeToggle<CR>
 map <Leader><Leader>u :GundoToggle<CR>
