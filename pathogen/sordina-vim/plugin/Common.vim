@@ -87,6 +87,9 @@ endif
 " Time insertion
 map <Leader><Leader>t o<C-R>=strftime('%c')<CR><esc>
 
+" Paginated Split
+map <leader><leader>s :vsplit<CR><c-w>l:set noscb<CR><c-f>:set scb<CR><c-w>h:set scb<CR>
+
 " Special shells
 if $SHELL =~ 'bin/fish'
 	set shell=/bin/sh
