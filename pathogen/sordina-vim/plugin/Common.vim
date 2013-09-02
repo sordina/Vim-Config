@@ -13,8 +13,6 @@ set incsearch
 set showmatch
 set ignorecase
 set smartcase
-set tabstop=2
-set shiftwidth=2
 set ai
 
 if has('unnamedplus')

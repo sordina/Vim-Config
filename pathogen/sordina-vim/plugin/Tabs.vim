@@ -1,9 +1,6 @@
-" By default, use spaced tabs.
-set expandtab
-
 " Display tabs as 4 spaces wide. When expandtab is set, use 4 spaces.
-set shiftwidth=4
-set tabstop=4
+set shiftwidth=2
+set tabstop=2
 
 function TabsOrSpaces()
     " Determines whether to use spaces or tabs on the current buffer.
@@ -17,6 +14,8 @@ function TabsOrSpaces()
 
     if numTabs > numSpaces
         setlocal noexpandtab
+    else
+        setlocal expandtab
     endif
 endfunction
 
