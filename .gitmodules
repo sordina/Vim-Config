@@ -70,3 +70,9 @@
 [submodule "pathogen/vim-snippets"]
 	path = pathogen/vim-snippets
 	url = https://github.com/honza/vim-snippets.git
+[submodule "pathogen/vim-addon-mw-utils"]
+	path = pathogen/vim-addon-mw-utils
+	url = https://github.com/MarcWeber/vim-addon-mw-utils.git
+[submodule "pathogen/tlib-vim"]
+	path = pathogen/tlib-vim
+	url = https://github.com/tomtom/tlib_vim.git
