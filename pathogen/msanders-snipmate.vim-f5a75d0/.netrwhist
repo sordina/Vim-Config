@@ -1,8 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
-let g:netrw_dirhist_1='/Users/lyndon/.vim/pathogen/sordina-vim'
-let g:netrw_dirhist_2='/users/lyndon/Documents/Code/scotty/Web/Scotty'
-let g:netrw_dirhist_3='/users/lyndon/Documents/Code/scotty/examples'
-let g:netrw_dirhist_4='/users/lyndon/Documents/Code/scotty/Web/Scotty'
-let g:netrw_dirhist_5='/users/lyndon/temp/asdf'
-let g:netrw_dirhist_6='/users/lyndon/.vim/pathogen/sordina-vim'

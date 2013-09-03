@@ -64,3 +64,9 @@
 [submodule "pathogen/nerdtree"]
 	path = pathogen/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
+[submodule "pathogen/snipmate"]
+	path = pathogen/snipmate
+	url = https://github.com/garbas/vim-snipmate.git
+[submodule "pathogen/vim-snippets"]
+	path = pathogen/vim-snippets
+	url = https://github.com/honza/vim-snippets.git
