@@ -44,7 +44,7 @@ endfunction
 " Shortcuts "
 "-----------"
 
-" (t)ype of expression
+" typ(e) of expressio(n)
 map <buffer> <Leader>e :w<CR>me"eyy:.!ghc -i. "%" -e ':t <cword>'<CR>"epkI-- <esc>`ej
 map <buffer> <Leader>n :set paste<CR>:w<CR>me:let haskinfo=system("ghc -i. \"" . expand("%") . "\" -e ':i " . expand("<cword>") . "'")<CR>O{-<CR><c-r>=haskinfo<CR>-}<esc>`e:set nopaste<CR>
 
