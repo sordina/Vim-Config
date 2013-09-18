@@ -68,6 +68,8 @@ map <Leader><Leader>a :NERDTreeToggle<CR>
 map <Leader><Leader>u :GundoToggle<CR>
 map <Leader><Leader>s :call InitShell()<cr>
 map <Leader><Leader>l :! tabulate<cr>
+map <Leader><Leader>g yiw:cexpr system('git grep <C-r>"')<CR>
+map <Leader><Leader>G yiw:cexpr system('git grep <C-r>"')
 map gs :vsplit<cr> gf
 
 " ---- Conditional Items
