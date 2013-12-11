@@ -76,3 +76,6 @@
 [submodule "pathogen/tlib-vim"]
 	path = pathogen/tlib-vim
 	url = https://github.com/tomtom/tlib_vim.git
+[submodule "pathogen/idris-lang"]
+	path = pathogen/idris-lang
+	url = https://github.com/idris-hackers/idris-vim.git
