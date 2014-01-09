@@ -72,6 +72,7 @@ map <Leader><Leader>l :! tabulate<cr>
 map <Leader><Leader>g yiw:cexpr system('git grep <C-r>"')<CR>
 map <Leader><Leader>G yiw:cexpr system('git grep <C-r>"')
 map gs :vsplit<cr> gf
+map gf :e <cfile><CR>
 
 " ---- Conditional Items
 
