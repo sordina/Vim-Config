@@ -79,3 +79,6 @@
 [submodule "pathogen/idris-lang"]
 	path = pathogen/idris-lang
 	url = https://github.com/idris-hackers/idris-vim.git
+[submodule "pathogen/vim-scala"]
+	path = pathogen/vim-scala
+	url = https://github.com/derekwyatt/vim-scala.git
