@@ -3,8 +3,8 @@
 "-----------"
 
 " (i)nterpreter
-map <buffer> <Leader>i :w<CR>:!jsrepl %<CR>
-map <buffer> <Leader>I :w<CR>:!jsrepl %
+map <buffer> <Leader>i :w<CR>:Start jsrepl %<CR>
+map <buffer> <Leader>I :w<CR>:Start jsrepl %
 
 " (r)un code
 map <buffer> <Leader>r :w<CR>:!node %<CR>
