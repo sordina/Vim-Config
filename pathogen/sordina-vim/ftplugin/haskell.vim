@@ -53,8 +53,8 @@ map <buffer> <Leader>b :w<CR>:!ghc --make -hidir /tmp -odir /tmp  -O2 -W "%" -o 
 map <buffer> <Leader>B :w<CR>:!ghc --make -hidir /tmp -odir /tmp  -O2 -W "%" -o "%<"
 
 " (i)nterpret
-map <buffer> <Leader>i :w<CR>:!ghci -Wall -XTemplateHaskell -XQuasiQuotes -i. "%"<CR>
-map <buffer> <Leader>I :w<CR>:!ghci -Wall -XTemplateHaskell -XQuasiQuotes -i. "%"
+map <buffer> <Leader>i :w<CR>:!ghci -fno-warn-type-defaults -Wall -XTemplateHaskell -XQuasiQuotes -i. "%"<CR>
+map <buffer> <Leader>I :w<CR>:!ghci -fno-warn-type-defaults -Wall -XTemplateHaskell -XQuasiQuotes -i. "%"
 
 " (d)efer type errors
 map <buffer> <Leader>d :w<CR>:!ghci -Wall -XTemplateHaskell -XQuasiQuotes -fdefer-type-errors -i. "%"<CR>
