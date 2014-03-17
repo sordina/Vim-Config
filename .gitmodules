@@ -82,3 +82,6 @@
 [submodule "pathogen/vim-scala"]
 	path = pathogen/vim-scala
 	url = https://github.com/derekwyatt/vim-scala.git
+[submodule "pathogen/repeat"]
+	path = pathogen/repeat
+	url = https://github.com/tpope/vim-repeat.git
