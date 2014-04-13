@@ -45,10 +45,12 @@ set list
 set nowrap
 
 " File type detection
-autocmd BufNewFile,BufRead *.ijs,*.ijt,*.ijp,*.ijx,*.j set filetype=jsoftware
-autocmd BufNewFile,BufRead todo.txt,TODO.txt,*.todo    set filetype=todo
-autocmd BufNewFile,BufRead *.lhs                       set filetype=lhaskell
-autocmd BufNewFile,BufRead *.cljx                      set filetype=clojure
+autocmd  BufNewFile,BufRead *.ijs,*.ijt,*.ijp,*.ijx,*.j set filetype=jsoftware
+autocmd  BufNewFile,BufRead todo.txt,TODO.txt,*.todo    set filetype=todo
+autocmd  BufNewFile,BufRead *.lhs                       set filetype=lhaskell
+autocmd  BufNewFile,BufRead *.cljx                      set filetype=clojure
+autocmd  BufNewFile,BufRead *.cljx                      set filetype=clojure
+autocmd! BufRead,BufNewFile *.ll                        set filetype=llvm
 
 " Jumps by visual line rather than logical line. For really long lines. :D
 nnoremap j gj
