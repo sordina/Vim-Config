@@ -85,3 +85,6 @@
 [submodule "pathogen/repeat"]
 	path = pathogen/repeat
 	url = https://github.com/tpope/vim-repeat.git
+[submodule "pathogen/elm"]
+	path = pathogen/elm
+	url = https://github.com/lambdatoast/elm.vim.git
