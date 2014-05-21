@@ -88,3 +88,6 @@
 [submodule "pathogen/elm"]
 	path = pathogen/elm
 	url = https://github.com/lambdatoast/elm.vim.git
+[submodule "pathogen/tagbar"]
+	path = pathogen/tagbar
+	url = git://github.com/majutsushi/tagbar
