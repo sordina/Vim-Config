@@ -65,7 +65,7 @@ set noswapfile
 nmap <silent> <space> :let @/=""<CR>
 
 let mapleader=";"
-let maplocaleader=";"
+let maplocalleader=";"
 let g:NERDTreeMapHelp=""
 
 map <Leader><Leader>a :NERDTreeToggle<CR>
