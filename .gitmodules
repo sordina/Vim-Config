@@ -91,3 +91,6 @@
 [submodule "pathogen/tagbar"]
 	path = pathogen/tagbar
 	url = git://github.com/majutsushi/tagbar
+[submodule "pathogen/haskell-syntax"]
+	path = pathogen/haskell-syntax
+	url = https://github.com/raichoo/haskell-vim.git
