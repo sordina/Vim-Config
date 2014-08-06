@@ -11,34 +11,37 @@ set expandtab
 " https://github.com/ujihisa/neco-ghc
 setlocal omnifunc=necoghc#omnifunc
 
-function! s:JustTheModules()
+if !exists("*s:JustTheModules") 
+  function! s:JustTheModules()
+    " Save position
+    let l:olda = @a
+    normal! ma
 
-	" Save position
-	let l:olda = @a
-	normal! ma
+    " Create a temporary file for ghci to work with
+    let l:mypath = tempname()
+    let l:mypath = l:mypath . '.hs'
 
-	" Create a temporary file for ghci to work with
-	let l:mypath = tempname()
-	let l:mypath = l:mypath . '.hs'
+    " Write imports to file
+    execute ':w ' . l:mypath
+    execute ':split ' . l:mypath
+    execute ':%g! /^import/d'
+    execute ':w ' . l:mypath
+    execute ':close'
 
-	" Send imports to file
-	execute ':redir >' . l:mypath
-	execute ':g/^import/'
-	execute ':redir END'
+    " Run ghci
+    execute ':silent !ghci -i. ' . l:mypath
 
-	" Run ghci
-	execute ':silent !ghci -i. ' . l:mypath
+    " Delete the file
+    execute ':silent !rm ' . l:mypath
 
-	" Delete the file
-	execute ':silent !rm ' . l:mypath
+    " Refresh the screen to fix 'silent' issues
+    execute ':redraw!'
 
-	" Refresh the screen to fix 'silent' issues
-	execute ':redraw!'
-
-	" Restore position
-	normal! `a
-	let @a = l:olda
-endfunction
+    " Restore position
+    normal! `a
+    let @a = l:olda
+  endfunction
+endif
 
 "-----------"
 " Shortcuts "
