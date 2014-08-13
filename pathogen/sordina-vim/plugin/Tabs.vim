@@ -12,11 +12,13 @@ function TabsOrSpaces()
     let numTabs=len(filter(getbufline(bufname("%"), 1, 250), 'v:val =~ "^\\t"'))
     let numSpaces=len(filter(getbufline(bufname("%"), 1, 250), 'v:val =~ "^ "'))
 
-    if numTabs > numSpaces
-        setlocal noexpandtab
-    else
-        setlocal expandtab
-    endif
+    if numTabs > 0 || numSpaces > 0
+      if numTabs > numSpaces
+          setlocal noexpandtab
+      else
+          setlocal expandtab
+      endif
+    end
 endfunction
 
 autocmd BufReadPost * call TabsOrSpaces()
