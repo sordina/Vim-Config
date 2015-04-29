@@ -50,6 +50,7 @@ autocmd  BufNewFile,BufRead todo.txt,TODO.txt,*.todo    set filetype=todo
 autocmd  BufNewFile,BufRead *.lhs                       set filetype=lhaskell
 autocmd  BufNewFile,BufRead *.cljx                      set filetype=clojure
 autocmd  BufNewFile,BufRead *.cljx                      set filetype=clojure
+autocmd  BufNewFile,BufRead *.m                         set filetype=mercury
 autocmd! BufRead,BufNewFile *.ll                        set filetype=llvm
 
 " Jumps by visual line rather than logical line. For really long lines. :D

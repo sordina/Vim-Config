@@ -94,3 +94,9 @@
 [submodule "pathogen/haskell-syntax"]
 	path = pathogen/haskell-syntax
 	url = https://github.com/raichoo/haskell-vim.git
+[submodule "pathogen/mercury"]
+	path = pathogen/mercury
+	url = https://github.com/vim-scripts/mercury.vim.git
+[submodule "pathogen/wting-rust"]
+	path = pathogen/wting-rust
+	url = https://github.com/wting/rust.vim.git
