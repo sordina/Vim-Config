@@ -100,3 +100,6 @@
 [submodule "pathogen/wting-rust"]
 	path = pathogen/wting-rust
 	url = https://github.com/wting/rust.vim.git
+[submodule "pathogen/vim-go"]
+	path = pathogen/vim-go
+	url = https://github.com/fatih/vim-go.git

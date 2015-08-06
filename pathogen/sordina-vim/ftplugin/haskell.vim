@@ -46,28 +46,24 @@ endfunction
 
 " typ(e) of expressio(n)
 set isk+='
-map <buffer> <Leader>e :w<CR>me"eyy:.!ghc -i. "%" -e ":t <cword>"<CR>"epkI-- <esc>`ej
-map <buffer> <Leader>n :set paste<CR>:w<CR>me:let haskinfo=system("ghc -i. \"" . expand("%") . "\" -e \":i " . expand("<cword>") . "\"")<CR>O{-<CR><c-r>=haskinfo<CR>-}<esc>`e:set nopaste<CR>
+map <buffer> <Leader>e :w<CR>me"eyy:.!cabal exec -- ghc -i./src -i. "%" -e ":t <cword>"<CR>"epkI-- <esc>`ej
+map <buffer> <Leader>n :set paste<CR>:w<CR>me:let haskinfo=system("cabal --no-require-sandbox exec -- ghc -i./src -i. \"" . expand("%") . "\" -e \":i " . expand("<cword>") . "\"")<CR>O{-<CR><c-r>=haskinfo<CR>-}<esc>`e:set nopaste<CR>
 
 " (b)uild
 map <buffer> <Leader>b :w<CR>:!ghc --make -hidir /tmp -odir /tmp  -O2 -W "%" -o "%<"<CR>
 map <buffer> <Leader>B :w<CR>:!ghc --make -hidir /tmp -odir /tmp  -O2 -W "%" -o "%<"
 
 " (i)nterpret
-map <buffer> <Leader>i :w<CR>:!ghci -fno-warn-type-defaults -Wall -XTemplateHaskell -XQuasiQuotes -i. "%"<CR>
-map <buffer> <Leader>I :w<CR>:!ghci -fno-warn-type-defaults -Wall -XTemplateHaskell -XQuasiQuotes -i. "%"
-
-" (d)efer type errors
-map <buffer> <Leader>d :w<CR>:!ghci -Wall -XTemplateHaskell -XQuasiQuotes -fdefer-type-errors -i. "%"<CR>
-map <buffer> <Leader>D :w<CR>:!ghci -Wall -XTemplateHaskell -XQuasiQuotes -fdefer-type-errors -i. "%"
+map <buffer> <Leader>i :w<CR>:!cabal --no-require-sandbox exec -- ghci -fno-warn-type-defaults -fdefer-type-errors -Wall -i. -i./src "%"<CR>
+map <buffer> <Leader>I :w<CR>:!cabal --no-require-sandbox exec -- ghci -fno-warn-type-defaults -fdefer-type-errors -Wall -i. -i./src "%"
 
 " interperet with just the (m)odule imports
 map <buffer> <Leader>m :w<CR>:call <SID>JustTheModules()<CR>
 map <buffer> <Leader>M :w<CR>:call <SID>JustTheModules()
 
 " (t)est with quickcheck
-map <buffer> <Leader>t :w<CR>:!quickcheck +names "%"<CR>
-map <buffer> <Leader>T :w<CR>:!quickcheck +names "%"
+map <buffer> <Leader>t :w<CR>:!cabal --no-require-sandbox exec -- quickcheck +names "%"<CR>
+map <buffer> <Leader>T :w<CR>:!cabal --no-require-sandbox exec -- quickcheck +names "%"
 
 " (r)un built version
 map <buffer> <Leader>r :w<CR>:!ghc --make -hidir /tmp -odir /tmp  -O2 -W "%" -o "%<" && ./%<<CR>
@@ -78,8 +74,8 @@ map <buffer> <Leader>c :w<CR>:!ghc --make -hidir /tmp -odir /tmp  -W -O2 -thread
 map <buffer> <Leader>C :w<CR>:!ghc --make -hidir /tmp -odir /tmp  -W -O2 -threaded "%" -o "%<" && ./%< +RTS -N2
 
 " Interpret (a)nd run
-map <buffer> <Leader>a :w<CR>:!runhaskell %<CR>
-map <buffer> <Leader>A :w<CR>:!runhaskell %
+map <buffer> <Leader>a :w<CR>:! cabal exec -- runhaskell -i. -i./src %<CR>
+map <buffer> <Leader>A :w<CR>:! cabal exec -- runhaskell -i. -i./src %
 
 " (p)rofile
 map <buffer> <Leader>p :w<CR>:!ghc --make -hidir /tmp -odir /tmp  -rtsopts -W -prof -auto-all "%" -o "%<" && ./"%<" +RTS -p -RTS && cat "%<.prof"<CR>
