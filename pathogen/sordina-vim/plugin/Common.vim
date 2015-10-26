@@ -1,6 +1,7 @@
 set nocompatible
 set hidden
 
+set cm=blowfish
 set shortmess=aTItoO
 set guioptions-=T
 set guioptions-=r
@@ -69,6 +70,7 @@ let mapleader=";"
 let maplocalleader=";"
 let g:NERDTreeMapHelp=""
 
+map <Leader><Leader>i V:!shell-interpret<CR>}
 map <Leader><Leader>a :NERDTreeToggle<CR>
 map <Leader><Leader>u :GundoToggle<CR>
 map <Leader><Leader>s :call InitShell()<cr>

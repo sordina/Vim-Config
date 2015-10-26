@@ -66,12 +66,12 @@ map <buffer> <Leader>t :w<CR>:!cabal --no-require-sandbox exec -- quickcheck +na
 map <buffer> <Leader>T :w<CR>:!cabal --no-require-sandbox exec -- quickcheck +names "%"
 
 " (r)un built version
-map <buffer> <Leader>r :w<CR>:!ghc --make -hidir /tmp -odir /tmp  -O2 -W "%" -o "%<" && ./%<<CR>
-map <buffer> <Leader>R :w<CR>:!ghc --make -hidir /tmp -odir /tmp  -O2 -W "%" -o "%<" && ./%<
+map <buffer> <Leader>r :w<CR>:! cabal exec -- ghc --make -hidir /tmp -odir /tmp  -O2 -W "%" -o "%<" && ./%<<CR>
+map <buffer> <Leader>R :w<CR>:! cabal exec -- ghc --make -hidir /tmp -odir /tmp  -O2 -W "%" -o "%<" && ./%<
 
 " (c)un concurrent built version
-map <buffer> <Leader>c :w<CR>:!ghc --make -hidir /tmp -odir /tmp  -W -O2 -threaded "%" -o "%<" && ./%< +RTS -N2<CR>
-map <buffer> <Leader>C :w<CR>:!ghc --make -hidir /tmp -odir /tmp  -W -O2 -threaded "%" -o "%<" && ./%< +RTS -N2
+map <buffer> <Leader>c :w<CR>:! cabal exec -- ghc --make -hidir /tmp -odir /tmp  -W -O2 -with-rtsopts=-N -threaded "%" -o "%<" && ./%< <CR>
+map <buffer> <Leader>C :w<CR>:! cabal exec -- ghc --make -hidir /tmp -odir /tmp  -W -O2 -with-rtsopts=-N -threaded "%" -o "%<" && ./%<
 
 " Interpret (a)nd run
 map <buffer> <Leader>a :w<CR>:! cabal exec -- runhaskell -i. -i./src %<CR>
