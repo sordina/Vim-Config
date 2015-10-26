@@ -70,7 +70,8 @@ let mapleader=";"
 let maplocalleader=";"
 let g:NERDTreeMapHelp=""
 
-map <Leader><Leader>i V:!shell-interpret<CR>}
+nmap <Leader><Leader>i V:!shell-interpret<CR>}j
+vmap <Leader><Leader>i :!shell-interpret<CR>}j
 map <Leader><Leader>a :NERDTreeToggle<CR>
 map <Leader><Leader>u :GundoToggle<CR>
 map <Leader><Leader>s :call InitShell()<cr>
