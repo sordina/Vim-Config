@@ -78,6 +78,8 @@ map <Leader><Leader>s :call InitShell()<cr>
 map <Leader><Leader>l :! tabulate<cr>
 map <Leader><Leader>g yiw:cexpr system('git grep <C-r>"')<CR>
 map <Leader><Leader>G yiw:cexpr system('git grep <C-r>"')
+map <Leader><Leader>b :b#<CR>
+map <Leader><Leader>q :q<CR>
 map gs :vsplit<cr> gf
 map gf :e <cfile><CR>
 
