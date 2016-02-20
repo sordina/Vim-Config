@@ -97,3 +97,6 @@
 [submodule "pathogen/vim-go"]
 	path = pathogen/vim-go
 	url = https://github.com/fatih/vim-go.git
+[submodule "pathogen/ctrlp"]
+	path = pathogen/ctrlp
+	url = https://github.com/ctrlpvim/ctrlp.vim
