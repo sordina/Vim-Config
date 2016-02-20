@@ -4,9 +4,6 @@
 [submodule "pathogen/html-template-syntax"]
 	path = pathogen/html-template-syntax
 	url = https://github.com/pbrisbin/html-template-syntax.git
-[submodule "pathogen/ctrlp.vim"]
-	path = pathogen/ctrlp.vim
-	url = https://github.com/kien/ctrlp.vim.git
 [submodule "pathogen/tpope-vim-pathogen"]
 	path = pathogen/tpope-vim-pathogen
 	url = https://github.com/tpope/vim-pathogen.git
@@ -16,9 +13,6 @@
 [submodule "pathogen/shakesperian-syntax"]
 	path = pathogen/shakesperian-syntax
 	url = https://github.com/pbrisbin/html-template-syntax.git
-[submodule "pathogen/kien-ctrl-p"]
-	path = pathogen/kien-ctrl-p
-	url = https://github.com/kien/ctrlp.vim.git
 [submodule "pathogen/vim-hybrid-colors"]
 	path = pathogen/vim-hybrid-colors
 	url = https://github.com/w0ng/vim-hybrid.git
@@ -103,3 +97,6 @@
 [submodule "pathogen/vim-go"]
 	path = pathogen/vim-go
 	url = https://github.com/fatih/vim-go.git
+[submodule "pathogen/ctrlp"]
+	path = pathogen/ctrlp
+	url = https://github.com/ctrlpvim/ctrlp.vim
