@@ -53,6 +53,10 @@ map <buffer> <Leader>n :set paste<CR>:w<CR>me:let haskinfo=system("cabal --no-re
 map <buffer> <Leader>b :w<CR>:!ghc --make -hidir /tmp -odir /tmp  -O2 -W "%" -o "%<"<CR>
 map <buffer> <Leader>B :w<CR>:!ghc --make -hidir /tmp -odir /tmp  -O2 -W "%" -o "%<"
 
+" stac(k) ghci
+map <buffer> <Leader>k :w<CR>:!stack exec ghci -- -i./src -fdefer-type-errors -Wall "%"
+map <buffer> <Leader>k :w<CR>:!stack exec ghci -- -i./src -fdefer-type-errors -Wall "%"<CR>
+
 " (i)nterpret
 map <buffer> <Leader>i :w<CR>:!cabal --no-require-sandbox exec -- ghci -fno-warn-type-defaults -fdefer-type-errors -Wall -i. -i./src "%"<CR>
 map <buffer> <Leader>I :w<CR>:!cabal --no-require-sandbox exec -- ghci -fno-warn-type-defaults -fdefer-type-errors -Wall -i. -i./src "%"
