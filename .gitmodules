@@ -100,3 +100,9 @@
 [submodule "pathogen/ctrlp"]
 	path = pathogen/ctrlp
 	url = https://github.com/ctrlpvim/ctrlp.vim
+[submodule "purescript-vim"]
+	path = purescript-vim
+	url = https://github.com/raichoo/purescript-vim.git
+[submodule "pathogen/purescript-vim"]
+	path = pathogen/purescript-vim
+	url = https://github.com/raichoo/purescript-vim.git
