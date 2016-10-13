@@ -72,7 +72,7 @@ let g:NERDTreeMapHelp=""
 
 nmap <Leader><Leader>i V:!shell-interpret<CR>}j
 vmap <Leader><Leader>i :!shell-interpret<CR>}j
-map <Leader><Leader>e :w<CR> :!open -a MacVim %<CR>
+map <Leader><Leader>e :w<CR> :!mvim %<CR>
 map <Leader><Leader>a :NERDTreeToggle<CR>
 map <Leader><Leader>u :GundoToggle<CR>
 map <Leader><Leader>s :call InitShell()<cr>
