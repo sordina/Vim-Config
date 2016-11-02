@@ -66,8 +66,8 @@ map <buffer> <Leader>m :w<CR>:call <SID>JustTheModules()<CR>
 map <buffer> <Leader>M :w<CR>:call <SID>JustTheModules()
 
 " (t)est with quickcheck
-map <buffer> <Leader>t :w<CR>:!cabal --no-require-sandbox exec -- quickcheck +names "%"<CR>
-map <buffer> <Leader>T :w<CR>:!cabal --no-require-sandbox exec -- quickcheck +names "%"
+map <buffer> <Leader>t :w<CR>:!stack exec -- quickcheck +names %<CR>
+map <buffer> <Leader>T :w<CR>:!stack exec -- quickcheck +names %
 
 " (r)un built version
 map <buffer> <Leader>r :w<CR>:! cabal exec -- ghc --make -hidir /tmp -odir /tmp  -O2 -W "%" -o "%<" && ./%<<CR>
