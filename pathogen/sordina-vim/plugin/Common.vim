@@ -110,3 +110,7 @@ endif
 " Ctrl-P Stuff
 nmap <c-p> :CtrlPMixed<CR>
 let g:ctrlp_working_path_mode = 2
+
+" ALE
+
+let g:ale_linters = {'haskell': ['stack-ghc']}

@@ -106,3 +106,6 @@
 [submodule "pathogen/purescript-vim"]
 	path = pathogen/purescript-vim
 	url = https://github.com/raichoo/purescript-vim.git
+[submodule "pathogen/ale"]
+	path = pathogen/ale
+	url = git@github.com:w0rp/ale.git
