@@ -121,4 +121,8 @@ let g:ctrlp_working_path_mode = 2
 
 " ALE
 
-let g:ale_linters = {'haskell': ['stack-ghc']}
+let g:ale_linters = {'haskell': ['hlint','hls']}
+" let g:ale_haskell_hls_executable = "/Users/lyndon/.ghcup/bin/haskell-language-server-8.10.7"
+
+nmap gd :ALEGoToDefinition<CR>
+nmap gh :ALEHover<CR>
